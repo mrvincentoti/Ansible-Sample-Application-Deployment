@@ -4,4 +4,5 @@
 - name: Install NPM
   apt: name=npm state=latest
 - name: Run Application
-  command: chdir=Ansible-Sample-Application-Deployment/roles/nodejs/files/backend && npm install && node server.js
+  command: pwd
+  #command: chdir=Ansible-Sample-Application-Deployment/roles/nodejs/files/backend && npm install && node server.js
