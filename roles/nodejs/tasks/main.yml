@@ -7,4 +7,4 @@
   # shell: pwd
   # register: playbook_path_output
   #- debug: var=playbook_path_output.stdout_lines
-  command: chdir=../files/backend && npm install && node server.js
+  command: chdir=/Ansible-Sample-Application-Deployment/roles/nodejs/files/backend && npm install && node server.js
