@@ -5,4 +5,4 @@
   apt: name=npm state=latest
 - name: Run Application
   shell: |
-    cd /home/ubuntu/Ansible-Sample-Application-Deployment/roles/nodejs/files/backend && npm install && node server.js
+    cd Ansible-Sample-Application-Deployment/roles/nodejs/files/backend && npm install && node server.js
