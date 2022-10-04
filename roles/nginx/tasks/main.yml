@@ -8,7 +8,7 @@
   become: yes
 - name: copy the nginx config file and restart nginx
   copy:
-    src: /home/demo/static_site.cfg
+    src: /home/ubuntu/Ansible-Sample-Application-Deployment/roles/nginx/files/static_site.cfg
     dest: /etc/nginx/sites-available/static_site.cfg
   become: yes
 - name: create symlink
