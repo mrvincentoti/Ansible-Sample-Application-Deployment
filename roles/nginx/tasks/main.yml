@@ -19,8 +19,8 @@
   become: yes
 - name: copy the content of the web site
   copy:
-    src: /home/demo/static-site-src/
-    dest: /home/foo/static-site
+    src: /home/ubuntu/Ansible-Sample-Application-Deployment/roles/nginx/files/index.html
+    dest: /home/demo/static-site
 - name: restart nginx
   service:
     name: nginx
