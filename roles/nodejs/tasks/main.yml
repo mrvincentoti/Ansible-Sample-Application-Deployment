@@ -12,7 +12,7 @@
     group: ubuntu
     mode: 0644
 - name: Run Application
-  command: ls -ll
+  command: ls -ll demo
   register: result
 - debug:
     var: result.stdout_lines
