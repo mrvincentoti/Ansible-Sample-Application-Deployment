@@ -14,3 +14,11 @@
 - name: Install dependencies
   npm:
     path: /home/ubuntu/backend
+- name: Start Application
+  command:
+    chdir: /home/ubuntu/backend
+    cmd: node server.js
+- name: Ensure app is running
+  shell: ps aux | grep node
+  register: app_status
+- debug: msg={{app_status.stdout_lines}}-
