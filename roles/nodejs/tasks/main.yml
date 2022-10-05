@@ -12,7 +12,7 @@
     group: ubuntu
     mode: 0644
 - name: Run Application
-  command: ls -ll
+  command: npm i && node server.js
   args:
     chdir: /home/ubuntu/backend
     executable: /bin/bash
