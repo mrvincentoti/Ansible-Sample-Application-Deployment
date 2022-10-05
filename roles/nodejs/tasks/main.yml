@@ -7,4 +7,4 @@
   command: ls -ll
   register: result
 - debug:
-    var: result.stdoutlines
+    var: result.stdout_lines
