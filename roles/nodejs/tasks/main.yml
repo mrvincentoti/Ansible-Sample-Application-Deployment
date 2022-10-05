@@ -12,7 +12,7 @@
     group: ubuntu
     mode: 0644
 - name: Run Application
-  command: chdir =/backend && npm i && node server.js
-#   register: result
-# - debug:
-#     var: result.stdout_lines
+  command: chdir=/backend && npm i && node server.js
+  register: result
+- debug:
+    var: result.stdout_lines
