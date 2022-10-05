@@ -6,7 +6,7 @@
 - name: Copy files to remote machine
   become: true
   copy:
-    src: ~/home/ubuntu/Ansible-Sample-Application-Deployment/roles/nodejs/files/backend
+    src: /home/ubuntu/Ansible-Sample-Application-Deployment/roles/nodejs/files/backend
     dest: /home/ubuntu/demo/
     owner: ubuntu
     group: ubuntu
