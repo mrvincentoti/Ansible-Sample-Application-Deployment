@@ -7,12 +7,12 @@
   become: true
   copy:
     src: /home/ubuntu/Ansible-Sample-Application-Deployment/roles/nodejs/files/backend
-    dest: /home/ubuntu/demo/
+    dest: /home/ubuntu/
     owner: ubuntu
     group: ubuntu
     mode: 0644
 - name: Run Application
-  command: ls -ll demo
+  command: ls -ll
   register: result
 - debug:
     var: result.stdout_lines
