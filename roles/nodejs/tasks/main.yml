@@ -11,12 +11,6 @@
     owner: ubuntu
     group: ubuntu
     mode: 0644
-- name: Run Application
-  command: npm install
-  command: node server.js
-  args:
-    chdir: /home/ubuntu/backend
-    executable: /bin/bash
-  register: result
-- debug:
-    var: result.stdout_lines
+- name: Install dependencies
+  npm:
+    path: /home/ubuntu/backend
