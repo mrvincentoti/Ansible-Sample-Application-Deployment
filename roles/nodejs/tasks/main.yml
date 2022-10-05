@@ -3,6 +3,14 @@
   apt: name=nodejs state=latest
 - name: Install NPM
   apt: name=npm state=latest
+- name: Copy files to remote machine
+  become: true
+  copy:
+    src: ~/home/ubuntu/Ansible-Sample-Application-Deployment/roles/nodejs/files/backend
+    dest: /home/ubuntu/demo/
+    owner: ubuntu
+    group: ubuntu
+    mode: 0644
 - name: Run Application
   command: ls -ll
   register: result
