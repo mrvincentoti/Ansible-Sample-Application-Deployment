@@ -14,7 +14,7 @@
 - name: Run Application
   command: ls -ll
   args:
-    chdir: /home/ubuntu/Ansible-Sample-Application-Deployment/roles/nodejs/files/backend
+    chdir: /home/ubuntu/backend
     executable: /bin/bash
   register: result
 - debug:
