@@ -4,4 +4,7 @@
 - name: Install NPM
   apt: name=npm state=latest
 - name: Run Application
-  command: chdir=/home/ubuntu/Ansible-Sample-Application-Deployment/roles/nodejs/files/backend
+  command: ls -ll
+  register: result
+- debug:
+    var: result.stdoutlines
