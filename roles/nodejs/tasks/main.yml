@@ -12,7 +12,10 @@
     group: ubuntu
     mode: 0644
 - name: Run Application
-  command: npm i && node server.js
+  command: "{{item}}"
+  with_items:
+    - npm install
+    - node server.js
   args:
     chdir: /home/ubuntu/backend
     executable: /bin/bash
